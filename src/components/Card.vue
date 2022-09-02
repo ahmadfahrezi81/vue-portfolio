@@ -1,5 +1,5 @@
 <template>
-    <div class="card-body" v-for="i in 3">
+    <div class="card-body" v-for="i in 3" :key="i">
         <h3>Web App</h3>
         <h1>Atask</h1>
 
