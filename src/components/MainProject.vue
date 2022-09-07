@@ -1,29 +1,38 @@
 <template>
-    <div class="card-body" v-for="i in 3" :key="i">
-        <h3>Web App</h3>
-        <h1>Atask</h1>
+    <div class="section-mainProject">
+        <div class="section_head">
+            <span class="section_head_title">Some things I’ve built</span>
+            <span class="section_head_number">2</span>
+        </div>
 
-        <div class="content">
-            <div class="content-body">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident, voluptatum. Beatae assumenda aliquam, nisi eos
-                    atque placeat, quas nam corporis fugiat repudiandae quia
-                    necessitatibus maxime! Nemo assumenda officia debitis
-                    deserunt!
-                </p>
-                <div class="content-footer">
-                    <div class="built-with">
-                        <span v-for="i in 4" :key="i">HTML</span>
+        <div class="section_body">
+            <div class="card-body" v-for="i in 3" :key="i">
+                <h3>Web App</h3>
+                <h1>Atask</h1>
+
+                <div class="content">
+                    <div class="content-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Provident, voluptatum. Beatae assumenda
+                            aliquam, nisi eos atque placeat, quas nam corporis
+                            fugiat repudiandae quia necessitatibus maxime! Nemo
+                            assumenda officia debitis deserunt!
+                        </p>
+                        <div class="content-footer">
+                            <div class="built-with">
+                                <span v-for="i in 4" :key="i">HTML</span>
+                            </div>
+                            <div class="links-to-go">
+                                <i class="fa-brands fa-github"></i>
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class="links-to-go">
-                        <i class="fa-brands fa-github"></i>
-                        <i class="fa-solid fa-up-right-from-square"></i>
+                    <div class="image-body">
+                        <img src="/photo.png" alt="photo" class="img-photo" />
                     </div>
                 </div>
-            </div>
-            <div class="image-body">
-                <img src="/photo.png" alt="photo" class="img-photo" />
             </div>
         </div>
     </div>
@@ -31,7 +40,12 @@
 <script>
 export default {};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
+.section_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .card-body {
     background: aliceblue;
     padding: 3.5rem;
@@ -84,6 +98,10 @@ export default {};
                     display: flex;
                     column-gap: 1rem;
                     font-size: 1.8rem;
+
+                    i {
+                        cursor: pointer;
+                    }
                 }
             }
         }

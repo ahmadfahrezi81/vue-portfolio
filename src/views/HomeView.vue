@@ -1,10 +1,12 @@
 <template>
     <div>
-        <MainProject />
+        <Navbar />
         <!-- <Recent /> -->
         <!-- <Sidebar /> -->
+        <!-- <MainProject /> -->
         <!-- <OtherNotable /> -->
         <!-- <Contact /> -->
+        <!-- <Spinner /> -->
     </div>
 </template>
 <script>
@@ -13,12 +15,24 @@ import Recent from "../components/Recent.vue";
 import Sidebar from "../components/Sidebar.vue";
 import Contact from "../components/Contact.vue";
 import OtherNotable from "../components/OtherNotable.vue";
+import Navbar from "../components/Navbar.vue";
+import Spinner from "../components/Spinner.vue";
 export default {
-    components: { MainProject, Recent, Sidebar, Contact, OtherNotable },
+    components: {
+        MainProject,
+        Recent,
+        Sidebar,
+        Contact,
+        OtherNotable,
+        Navbar,
+        Spinner,
+    },
 };
 </script>
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=PT+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=PT+Sans:wght@400;700&family=Nerko+One&display=swap");
+
+$base-blue: #2c63d8;
 
 // add this later to main.css -> this is temporary
 div,

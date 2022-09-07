@@ -62,6 +62,7 @@ export default {};
 
         span {
             display: inline-block;
+            font-size: 1.5rem;
         }
     }
 
@@ -71,8 +72,9 @@ export default {};
     }
 
     button.explore_all:hover span {
-        animation: rotateAnimate 1.5s alternate linear;
-        animation-iteration-count: infinite;
+        animation: rotateAnimate 1.3s alternate linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
     }
 
     @keyframes rotateAnimate {
