@@ -27,7 +27,6 @@ export default {
         OtherNotable,
         Navbar,
         Spinner,
-        Navbar1,
     },
 };
 </script>
