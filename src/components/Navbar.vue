@@ -53,7 +53,7 @@ export default {
             isDesktop.value = window.innerWidth > 640;
 
             window.addEventListener("resize", () => {
-                console.log(window.innerWidth);
+                // console.log(window.innerWidth);
 
                 isDesktop.value = window.innerWidth > 640;
             });

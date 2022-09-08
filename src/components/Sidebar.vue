@@ -41,6 +41,12 @@ export default {
 
                 isOpen.value = window.innerWidth > 640;
             });
+
+            if (isOpen) {
+                onscroll = () => {
+                    isOpen.value = false;
+                };
+            }
         });
 
         return { isOpen, handleOpen };
@@ -134,7 +140,8 @@ body {
     }
 
     .icon:hover {
-        background: rgb(177, 219, 255);
+        color: rgb(27, 148, 255);
+        background: rgb(195, 227, 255);
     }
 }
 </style>

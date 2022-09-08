@@ -3,6 +3,7 @@
         <Navbar />
         <!-- <Recent /> -->
         <Sidebar />
+        <Stack />
         <!-- <MainProject /> -->
         <!-- <OtherNotable /> -->
         <!-- <Contact /> -->
@@ -17,6 +18,7 @@ import Contact from "../components/Contact.vue";
 import OtherNotable from "../components/OtherNotable.vue";
 import Navbar from "../components/Navbar.vue";
 import Spinner from "../components/Spinner.vue";
+import Stack from "../components/Stack.vue";
 
 export default {
     components: {
@@ -27,6 +29,7 @@ export default {
         OtherNotable,
         Navbar,
         Spinner,
+        Stack,
     },
 };
 </script>
