@@ -128,7 +128,15 @@ body {
     font-size: 1.5rem;
 
     border: 3px solid black;
+    // background: #000;
     border-radius: 1rem;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
 
     .icon {
         padding: 0.5rem 1rem;

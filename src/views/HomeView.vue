@@ -1,9 +1,11 @@
 <template>
     <div>
-        <Navbar />
+        <!-- <Navbar /> -->
         <!-- <Recent /> -->
-        <Sidebar />
-        <Stack />
+        <!-- <Hero /> -->
+        <AboutMe />
+        <!-- <Sidebar /> -->
+        <!-- <Stack /> -->
         <!-- <MainProject /> -->
         <!-- <OtherNotable /> -->
         <!-- <Contact /> -->
@@ -19,6 +21,8 @@ import OtherNotable from "../components/OtherNotable.vue";
 import Navbar from "../components/Navbar.vue";
 import Spinner from "../components/Spinner.vue";
 import Stack from "../components/Stack.vue";
+import Hero from "../components/Hero.vue";
+import AboutMe from "../components/AboutMe.vue";
 
 export default {
     components: {
@@ -30,6 +34,8 @@ export default {
         Navbar,
         Spinner,
         Stack,
+        Hero,
+        AboutMe,
     },
 };
 </script>

@@ -73,7 +73,7 @@ export default {
     grid-template-columns: 2fr 1fr 2fr;
     justify-items: center;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 5rem;
 
     .desktop_option {
         justify-self: start; //for the grid
@@ -153,7 +153,7 @@ export default {
 
     .mobile_menu_opened {
         z-index: 99;
-        position: absolute;
+        position: fixed;
         background: #ffd68f;
         left: 0;
         right: 0;
