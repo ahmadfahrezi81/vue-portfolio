@@ -1,0 +1,20 @@
+[
+    {
+        "skills": [
+            "Html", "CSS", "JavaScript", "Typescript",
+            "Vue", "React", "JQuery", "Node", "Express", "Bootstrap", "Tailwinds", 
+            "Scss/Sass", "Semantic UI", "Git", "Git bash", "Java", "Python", "Firestore", 
+            "MongoDB", "Firebase Auth"
+        ],
+        "otherNotable": [
+            {
+                "date": "",
+                "title": "Atask",
+                "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nihil, porro deserunt magni eveniet atque cupiditate natus amet, officia autem quam repudiandae magnam delectus ipsa, laboriosam assumenda quaerat accusantium officiis.",
+                "stack": ["HTML", "CSS", "JS"],
+                "github": "",
+                "external": ""
+            }
+        ]
+    }
+]

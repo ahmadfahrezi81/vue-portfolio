@@ -98,9 +98,15 @@ export default {};
 
 .notable_cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    // grid-template-columns: auto auto;
+    // grid-auto-flow: row dense;
+    // grid-template-columns: repeat(auto-fill, minmax(1fr, max-content));
+
     gap: 1.5rem 2.5rem;
-    margin: 3rem 15vw;
+    margin: 3rem 5vw;
 
     .notable_card {
         display: block;

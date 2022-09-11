@@ -122,7 +122,9 @@ export default {
             .stack_icons {
                 font-size: 2.5rem;
                 display: flex;
+                flex-wrap: wrap;
                 column-gap: 1.5rem;
+                row-gap: 1.5rem;
                 margin-top: 0.3rem;
             }
         }
@@ -191,5 +193,13 @@ export default {
 
 .technology_stack_button:hover > span {
     display: inline-block;
+}
+@media (max-width: 450px) {
+    .technology_stack_popup {
+        .popup {
+            height: 100%;
+            width: 100%;
+        }
+    }
 }
 </style>
