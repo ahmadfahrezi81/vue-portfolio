@@ -15,9 +15,9 @@ export default {};
 
 <style lang="scss" scoped>
 .spinner-box {
-    width: 140px;
-    height: 140px;
-    margin: 20px;
+    width: 100%;
+    height: 100vh;
+    // margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,35 +26,35 @@ export default {};
     span {
         position: absolute;
         text-align: center;
-        font-size: 4em;
+        font-size: 2.5rem;
         font-weight: bold;
     }
 
     .configure-border-1 {
-        width: 140px;
-        height: 140px;
+        width: 110px;
+        height: 110px;
         padding: 3px;
         position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 4px solid black;
+        border: 3px solid #232330;
         border-radius: 2rem;
-        animation: configure-clockwise 2.5s ease-in-out infinite alternate;
+        animation: configure-clockwise 3s ease-in-out infinite alternate;
     }
 
     .configure-border-2 {
         border-radius: 2rem;
-        width: 115px;
-        height: 115px;
+        width: 110px;
+        height: 110px;
         padding: 3px;
         left: -115px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 3px solid black;
+        border: 3px solid #232330;
         transform: rotate(45deg);
-        animation: configure-xclockwise 2.5s ease-in-out infinite alternate;
+        animation: configure-xclockwise 3s ease-in-out infinite alternate;
     }
     .configure-core {
         width: 100%;

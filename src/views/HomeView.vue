@@ -1,15 +1,15 @@
 <template>
     <div>
-        <!-- <Navbar /> -->
-        <Recent />
+        <!-- <Navbar /> 👍 -->
+        <!-- <Recent />  👍`-->
         <!-- <Hero /> -->
         <!-- <AboutMe /> -->
-        <!-- <Sidebar /> -->
-        <!-- <Stack /> -->
+        <!-- <Sidebar /> 👍-->
+        <!-- <Stack /> 👍-->
         <!-- <MainProject /> -->
-        <!-- <OtherNotable /> -->
+        <!-- <OtherNotable /> 👍-->
         <!-- <Contact /> -->
-        <!-- <Spinner /> -->
+        <!-- <Spinner /> 👍-->
     </div>
 </template>
 <script>
