@@ -37,6 +37,7 @@ export default {};
         align-items: center;
         justify-content: center;
         margin: 40px 0;
+        text-align: center;
 
         h1 {
             font-weight: 700;

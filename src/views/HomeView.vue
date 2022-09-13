@@ -8,8 +8,9 @@
         <!-- <Stack /> 👍-->
         <!-- <MainProject /> -->
         <!-- <OtherNotable /> 👍-->
-        <!-- <Contact /> -->
+        <!-- <Contact /> 👍`-->
         <!-- <Spinner /> 👍-->
+        <Test />
     </div>
 </template>
 <script>
@@ -23,6 +24,7 @@ import Spinner from "../components/Spinner.vue";
 import Stack from "../components/Stack.vue";
 import Hero from "../components/Hero.vue";
 import AboutMe from "../components/AboutMe.vue";
+import Test from "../components/Test.vue";
 
 export default {
     components: {
@@ -36,6 +38,7 @@ export default {
         Stack,
         Hero,
         AboutMe,
+        Test,
     },
 };
 </script>
