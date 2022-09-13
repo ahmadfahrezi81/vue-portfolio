@@ -40,15 +40,17 @@ export default {};
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 3px solid black;
-        border-radius: 0.5rem;
-        animation: configure-clockwise 2.5s ease-in-out infinite alternate;
+        border: 2px solid black;
+        border-radius: 1rem;
+        animation: configure-clockwise 3s ease-in-out infinite alternate;
     }
 
     .configure-border-2 {
-        border-radius: 0.5rem;
-        width: 38px;
-        height: 38px;
+        border-radius: 1rem;
+        width: 50px;
+        height: 50px;
+        // width: 38px;
+        // height: 38px;
         padding: 3px;
         left: -115px;
         display: flex;
@@ -56,7 +58,7 @@ export default {};
         align-items: center;
         border: 2px solid black;
         transform: rotate(45deg);
-        animation: configure-xclockwise 2.5s ease-in-out infinite alternate;
+        animation: configure-xclockwise 3s ease-in-out infinite alternate;
     }
     .configure-core {
         width: 100%;

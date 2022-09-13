@@ -117,6 +117,8 @@ export default {
     display: flex;
     justify-content: center;
 
+    margin-bottom: 3rem;
+
     .hand_animation {
         position: absolute;
         top: 6rem;

@@ -1,16 +1,16 @@
 <template>
     <div>
-        <!-- <Navbar /> 👍 -->
-        <!-- <Recent />  👍`-->
-        <!-- <Hero /> -->
+        <Navbar />
+        <!-- <Recent /> -->
+        <Hero />
         <!-- <AboutMe /> -->
         <!-- <Sidebar /> 👍-->
         <!-- <Stack /> 👍-->
         <!-- <MainProject /> -->
         <!-- <OtherNotable /> 👍-->
         <!-- <Contact /> 👍`-->
-        <!-- <Spinner /> 👍-->
-        <Test />
+        <!-- <Spinner /> -->
+        <!-- <Test /> -->
     </div>
 </template>
 <script>
