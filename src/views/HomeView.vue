@@ -1,9 +1,9 @@
 <template>
     <div>
-        <Navbar />
+        <!-- <Navbar /> -->
         <!-- <Recent /> -->
-        <Hero />
-        <!-- <AboutMe /> -->
+        <!-- <Hero /> -->
+        <AboutMe />
         <!-- <Sidebar /> 👍-->
         <!-- <Stack /> 👍-->
         <!-- <MainProject /> -->
