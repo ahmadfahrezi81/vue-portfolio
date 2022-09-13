@@ -2,16 +2,25 @@
     <!-- <button @click="showSidebar = !showSidebar">Show</button> -->
     <div class="icons" v-if="isOpen">
         <div class="icon">
-            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/Anti-glitches" target="_blank"
+                ><i class="fa-brands fa-github"></i
+            ></a>
         </div>
         <div class="icon">
-            <i class="fa-brands fa-twitter"></i>
+            <a href="https://twitter.com/AhmadFa31438211" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
         </div>
         <div class="icon">
-            <i class="fa-regular fa-envelope"></i>
+            <a href="mailto:ahmadfahrezi8127@gmail.com" target="_blank">
+                <!-- https://mail.google.com/mail/?view=cm&fs=1&to=email@domain.example-->
+                <i class="fa-solid fa-envelope"></i>
+            </a>
         </div>
         <div class="icon">
-            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/ahmadfahrezi" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
         </div>
         <div class="icon">
             <i class="fa-brands fa-dribbble"></i>
@@ -145,11 +154,18 @@ body {
         align-items: center;
         width: fit-content;
         cursor: pointer;
+
+        a {
+            line-height: 0;
+        }
     }
 
     .icon:hover {
-        color: rgb(27, 148, 255);
         background: rgb(195, 227, 255);
+    }
+
+    .icon:hover i {
+        color: rgb(27, 148, 255);
     }
 }
 </style>

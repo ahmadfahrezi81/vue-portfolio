@@ -13,7 +13,11 @@
             </p>
             <p class="popup_fork">
                 <i class="fa-solid fa-code-fork"></i> Get code in the repo
-                <a href="#"><b> here</b></a>
+                <a
+                    href="https://github.com/Anti-glitches/vue-portfolio"
+                    target="_blank"
+                    ><b> here</b></a
+                >
             </p>
             <div class="popup_stack">
                 <i class="fa-solid fa-layer-group"></i>The stack in this
@@ -28,11 +32,28 @@
             <div class="popup_contact_menu">
                 <p>Find me here:</p>
                 <div class="footer_icons">
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-solid fa-envelope"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-solid fa-globe"></i>
+                    <a href="https://github.com/Anti-glitches" target="_blank"
+                        ><i class="fa-brands fa-github"></i
+                    ></a>
+                    <a
+                        href="https://www.linkedin.com/in/ahmadfahrezi"
+                        target="_blank"
+                    >
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:ahmadfahrezi8127@gmail.com" target="_blank">
+                        <!-- https://mail.google.com/mail/?view=cm&fs=1&to=email@domain.example-->
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a
+                        href="https://twitter.com/AhmadFa31438211"
+                        target="_blank"
+                    >
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-globe"></i>
+                    </a>
                 </div>
             </div>
         </div>

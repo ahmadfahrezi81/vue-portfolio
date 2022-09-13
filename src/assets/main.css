@@ -17,3 +17,10 @@ body{
     background: #FEFBF6;
     color: #232330;
 }
+
+a{
+    color: #232330;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}

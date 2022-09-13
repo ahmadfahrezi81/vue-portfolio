@@ -12,13 +12,17 @@
             <button>Say hello <span>&#128075;</span></button>
         </div>
 
-        <div class="section_footer">
+        <a
+            href="https://github.com/Anti-glitches/vue-portfolio"
+            target="_blank"
+            class="section_footer"
+        >
             <p class="tag">Designed & Built by Ahmad Fahrezi</p>
             <p>
                 <i class="fa-brands fa-github"></i>
                 <span>@Anti-glitches</span>
             </p>
-        </div>
+        </a>
     </div>
 </template>
 <script>
@@ -111,6 +115,8 @@ export default {};
         width: fit-content;
         cursor: pointer;
         transition: 0.3s all ease;
+        text-decoration: none;
+        color: #232330;
 
         p {
             margin: 0;
