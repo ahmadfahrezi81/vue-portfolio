@@ -8,7 +8,7 @@
         <div class="section_body">
             <h1>Let's chat</h1>
             <p>Have an exciting project in mind or just want to talk?</p>
-            <p>Feels free to say hi! <span>&#128071;</span></p>
+            <p>Feel free to say hi! <span>&#128071;</span></p>
             <button>Say hello <span>&#128075;</span></button>
         </div>
 
@@ -24,9 +24,9 @@
 <script>
 export default {};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .section_contact {
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,8 +36,8 @@ export default {};
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 40px 0;
         text-align: center;
+        margin-bottom: 15vh;
 
         h1 {
             font-weight: 700;

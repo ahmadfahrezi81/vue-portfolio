@@ -1,14 +1,14 @@
 <template>
-    <div>
-        <!-- <Navbar /> -->
+    <div class="home">
+        <Navbar />
         <!-- <Recent /> -->
-        <!-- <Hero /> -->
+        <Hero />
         <AboutMe />
-        <!-- <Sidebar /> 👍-->
-        <!-- <Stack /> 👍-->
-        <!-- <MainProject /> -->
-        <!-- <OtherNotable /> 👍-->
-        <!-- <Contact /> 👍`-->
+        <Sidebar />
+        <Stack />
+        <MainProject />
+        <OtherNotable />
+        <Contact /> `
         <!-- <Spinner /> -->
         <!-- <Test /> -->
     </div>
@@ -53,12 +53,20 @@ button {
     font-family: "Nunito", sans-serif;
 }
 
+.home {
+    display: flex;
+    flex-direction: column;
+    // row-gap: 2rem;
+}
+
 .section_head {
     font-family: "PT Sans", sans-serif;
     font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 2rem 0;
+    margin-top: 18vh;
 
     &_title {
         position: absolute;

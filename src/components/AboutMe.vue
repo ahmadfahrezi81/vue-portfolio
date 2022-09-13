@@ -46,13 +46,14 @@ export default {
     flex-direction: column;
     // justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     row-gap: 2rem;
 
     img {
         box-shadow: 5px 5px #232330;
         border-radius: 1rem;
         width: 300px;
+        justify-self: center;
     }
 
     .para {
@@ -74,16 +75,18 @@ export default {
         }
 
         &_skills {
+            font-size: 0.8rem;
             font-weight: 600;
             display: flex;
             flex-wrap: wrap;
 
             span {
+                padding: 0.5rem 1rem;
+                margin: 0.3rem;
+
                 display: inline-block;
-                padding: 0.5rem 2rem;
                 border: 2px solid #232330;
                 box-shadow: 2px 2px #232330;
-                margin: 0.5rem;
                 border-radius: 0.5rem;
             }
         }
@@ -97,32 +100,44 @@ export default {
             "img para"
             "tech tech";
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 3fr;
         column-gap: 2rem;
+        padding: 0 2vw;
 
-        margin: 0 8vw;
+        margin: 0 10vw;
 
         .para {
             grid-area: para;
+            // margin-right: 4rem;
         }
 
         img {
             grid-area: img;
+            // margin-left: 4rem;
+
             // width: 340px;
             // justify-self: center;
         }
 
         .tech {
             grid-area: tech;
+
+            &_skills {
+                font-size: 1rem;
+
+                span {
+                    padding: 0.5rem 2rem;
+                    margin: 0.5rem;
+                }
+            }
         }
     }
+}
 
-    .tech_skills {
-        font-size: 0.8rem;
-
-        span {
-            padding: 0.5rem 1rem;
-            margin: 0.3rem;
+@media (min-width: 1000px) {
+    .section_body {
+        img {
+            width: 340px;
         }
     }
 }

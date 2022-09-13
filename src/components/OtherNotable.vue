@@ -18,7 +18,7 @@
                     </p>
                     <div class="notable_footer">
                         <div class="built-with">
-                            <span v-for="i in 3" :key="i">HTML</span>
+                            <span v-for="i in 4" :key="i">HTML</span>
                         </div>
                         <div class="links-to-go">
                             <i class="fa-brands fa-github"></i>
@@ -38,16 +38,16 @@
 export default {};
 </script>
 <style lang="scss" scoped>
-.section_otherNotable {
-    margin: 10vh 0;
-}
+// .section_otherNotable {
+//     margin: 10vh 0;
+// }
 
 .section_body {
     display: flex;
     flex-direction: column;
     // justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
 
     button.explore_all {
         display: inline-block;
@@ -98,12 +98,7 @@ export default {};
 
 .notable_cards {
     display: grid;
-    // grid-template-columns: repeat(3, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-    // grid-template-columns: auto auto;
-    // grid-auto-flow: row dense;
-    // grid-template-columns: repeat(auto-fill, minmax(1fr, max-content));
 
     gap: 1.5rem 2.5rem;
     margin: 3rem 5vw;
@@ -132,15 +127,21 @@ export default {};
             justify-content: space-between;
             align-items: center;
 
+            column-gap: 1rem;
+
+            // flex-direction: column;
+            // row-gap: 1rem;
+
             .built-with {
                 display: flex;
-                column-gap: 1rem;
+                flex-wrap: wrap;
+                column-gap: 0.5rem;
             }
 
             .links-to-go {
                 display: flex;
                 column-gap: 0.8rem;
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 margin-right: 1rem;
 
                 i {

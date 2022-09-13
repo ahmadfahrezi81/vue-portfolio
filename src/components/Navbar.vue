@@ -154,7 +154,7 @@ export default {
     }
 
     .mobile_menu_opened {
-        z-index: 99;
+        z-index: 100;
         position: fixed;
         background: #ffd68f;
         left: 0;

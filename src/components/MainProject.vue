@@ -6,7 +6,7 @@
         </div>
 
         <div class="section_body">
-            <div class="card" v-for="i in 1" :key="i">
+            <div class="card" v-for="i in 4" :key="i">
                 <div class="card_title">
                     <h3>Web App</h3>
                     <h1>Atask</h1>
@@ -42,9 +42,11 @@ export default {};
 .card {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
 
-    margin: 0 5vw;
+    margin: 0 1rem;
+    margin-bottom: 2rem;
+
     background: linear-gradient(125deg, #f9ccf7, #ffeec3);
     border-radius: 1rem;
 
@@ -82,7 +84,7 @@ export default {};
         &_footer {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
 
             column-gap: 2rem;
 
@@ -113,7 +115,7 @@ export default {};
 
             &_footer {
                 flex-direction: column;
-                row-gap: 2rem;
+                row-gap: 1rem;
             }
         }
     }
@@ -158,6 +160,10 @@ export default {};
             grid-area: para;
             min-width: 350px;
             margin-right: -10vw;
+
+            &_footer {
+                align-items: center;
+            }
         }
     }
 }

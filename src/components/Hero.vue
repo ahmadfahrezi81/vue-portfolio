@@ -32,7 +32,7 @@ export default {};
 
         h1 {
             font-size: 3.5rem;
-            color: #585858;
+            color: #3d3d3d;
             margin: 0;
         }
 
@@ -44,9 +44,17 @@ export default {};
 
         button {
             margin-top: 2rem;
-            border: 3px solid black;
+            border: 3px solid #232330;
             border-radius: 0.5rem;
             padding: 1rem 4rem;
+            background: none;
+            cursor: pointer;
+            transition: 0.5s ease all;
+        }
+
+        button:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 2px 2px #232330;
         }
     }
 }
@@ -64,6 +72,7 @@ export default {};
     .glasses {
         width: 360px;
         position: absolute;
+        z-index: 2;
 
         animation: growAnimation 2s alternate linear;
         animation-iteration-count: infinite;
