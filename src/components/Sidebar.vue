@@ -68,6 +68,7 @@ body {
 }
 
 .sidebar_arrow {
+    z-index: 100;
     position: fixed;
     top: 50%;
     bottom: 50%;

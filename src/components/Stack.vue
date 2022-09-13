@@ -6,7 +6,7 @@
 
     <div v-if="isStack" class="technology_stack_popup">
         <div class="popup">
-            <h1>Hello 👋</h1>
+            <h1>Hello <span>&#128075;</span></h1>
             <i class="fa-solid fa-circle-xmark" @click="handleTech"></i>
             <p class="popup_intro">
                 This site is built by <span>Ahmad Fahrezi</span>
@@ -98,6 +98,23 @@ export default {
 
         h1 {
             margin-top: 2.5rem;
+
+            span {
+                display: inline-block;
+                animation: shake 0.8s alternate ease-in-out;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes shake {
+                0% {
+                    transform-origin: bottom right;
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform-origin: bottom right;
+                    transform: rotate(50deg);
+                }
+            }
         }
 
         .fa-circle-xmark {
@@ -186,6 +203,7 @@ export default {
 }
 
 .technology_stack_button {
+    z-index: 99;
     position: fixed;
     right: 0;
     bottom: 10%;

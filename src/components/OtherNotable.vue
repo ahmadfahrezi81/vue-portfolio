@@ -1,7 +1,7 @@
 <template>
     <div class="section_otherNotable">
         <div class="section_head">
-            <span class="section_head_title">Other Notable Product</span>
+            <span class="section_head_title">Other Notable Project</span>
             <span class="section_head_number">2.5</span>
         </div>
 
