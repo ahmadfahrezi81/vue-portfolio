@@ -28,14 +28,25 @@
                 </div>
             </div>
 
-            <button class="explore_all">
+            <button class="explore_all" @click="toRecent">
                 Explore All <span>&#129517;</span>
             </button>
         </div>
     </div>
 </template>
 <script>
-export default {};
+import { useRouter } from "vue-router";
+export default {
+    setup() {
+        const router = useRouter();
+
+        const toRecent = () => {
+            router.push("/recent");
+        };
+
+        return { toRecent };
+    },
+};
 </script>
 <style lang="scss" scoped>
 // .section_otherNotable {

@@ -1,6 +1,6 @@
 <template>
     <div class="section_mainProject">
-        <div class="section_head">
+        <div class="section_head" id="MainProject">
             <span class="section_head_title">Some things I’ve built</span>
             <span class="section_head_number">2</span>
         </div>

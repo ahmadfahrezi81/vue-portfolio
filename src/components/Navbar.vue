@@ -2,9 +2,14 @@
     <div>
         <div v-if="isDesktop" class="navbar_desktop">
             <ul class="desktop_option">
-                <li>About</li>
+                <!-- <li @click="test">About</li> -->
+                <li @click="home"><a href="#AboutMe">About</a></li>
+                <li @click="home"><a href="#MainProject">Project</a></li>
+                <li @click="home"><a href="#Contact">Contact</a></li>
+
+                <!-- <li>About</li>
                 <li>Project</li>
-                <li>Contact</li>
+                <li>Contact</li> -->
             </ul>
             <Logo />
             <button class="desktop_resume">Resume</button>
@@ -22,7 +27,7 @@
                 <Logo />
 
                 <ul class="mobile_option">
-                    <li>About</li>
+                    <li @click="home">About</li>
                     <li>Project</li>
                     <li>Contact</li>
                 </ul>
@@ -38,12 +43,15 @@
 <script>
 import { onMounted, ref } from "vue";
 import Logo from "./Logo.vue";
+import { useRouter } from "vue-router";
+
 export default {
     components: { Logo },
     setup() {
         const isDesktop = ref(true);
         const isMenu = ref(false);
         const handIsAlive = ref(true);
+        const router = useRouter();
 
         setTimeout(() => {
             handIsAlive.value = false;
@@ -63,7 +71,11 @@ export default {
             isMenu.value = !isMenu.value;
         };
 
-        return { isDesktop, isMenu, handIsAlive, handleMenu };
+        const home = () => {
+            router.push("/");
+        };
+
+        return { isDesktop, isMenu, handIsAlive, handleMenu, home };
     },
 };
 </script>

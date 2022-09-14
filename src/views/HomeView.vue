@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <Navbar />
+        <!-- <Navbar /> -->
         <!-- <Recent /> -->
         <Hero />
         <AboutMe />
@@ -8,7 +8,7 @@
         <Stack />
         <MainProject />
         <OtherNotable />
-        <Contact /> `
+        <Contact />
         <!-- <Spinner /> -->
         <!-- <Test /> -->
     </div>

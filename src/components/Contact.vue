@@ -1,6 +1,6 @@
 <template>
     <div class="section_contact">
-        <div class="section_head">
+        <div class="section_head" id="Contact">
             <span class="section_head_title">What's Next</span>
             <span class="section_head_number">3</span>
         </div>
