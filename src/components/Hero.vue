@@ -6,11 +6,11 @@
             <button>Nothing for Now</button>
         </div>
         <div class="hero_animation">
-            <img class="glasses" src="glasses_doodle.png" alt="glass" />
-            <img class="lower_circle" src="lower_circle.png" alt="" />
-            <img class="shine place1" src="shine.png" />
-            <img class="shine place2" src="shine.png" />
-            <img class="shine place3" src="shine.png" />
+            <img class="glasses" src="/glasses_doodle.png" alt="glasses" />
+            <img class="lower_circle" src="/lower_circle.png" alt="circle" />
+            <img class="shine place1" src="/shine.png" alt="shine" />
+            <img class="shine place2" src="/shine.png" alt="shine" />
+            <img class="shine place3" src="/shine.png" alt="shine" />
         </div>
     </div>
 </template>

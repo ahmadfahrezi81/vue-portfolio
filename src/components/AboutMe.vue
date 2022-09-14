@@ -4,7 +4,7 @@
         <span class="section_head_number">1</span>
     </div>
     <div class="section_body">
-        <img src="profile.png" alt="portfolio" />
+        <img src="/profile.png" alt="portfolio" />
 
         <div class="para">
             <h3>I’m Ahmad, a Full Stack Dev.</h3>

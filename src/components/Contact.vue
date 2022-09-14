@@ -91,7 +91,7 @@ export default {};
         }
 
         button:hover span {
-            animation: shake 0.5s alternate;
+            animation: shake 0.5s alternate ease-in-out;
             animation-iteration-count: infinite;
         }
 
