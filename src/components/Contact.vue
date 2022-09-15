@@ -42,6 +42,7 @@ export default {};
         justify-content: center;
         text-align: center;
         margin-bottom: 15vh;
+        padding: 0 1rem;
 
         h1 {
             font-weight: 700;

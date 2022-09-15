@@ -62,10 +62,10 @@ export default {
     },
 };
 </script>
-<style lang="scss">
-body {
-    height: 200vh;
-}
+<style lang="scss" scoped>
+// body {
+//     height: 200vh;
+// }
 
 .sidebar_arrow {
     z-index: 100;
