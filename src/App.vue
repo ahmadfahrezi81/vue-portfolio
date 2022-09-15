@@ -3,6 +3,7 @@
         <Navbar />
         <!-- <HomeView /> -->
         <router-view />
+        <div id="technology">IT SHOULD SCROLL TO HERE</div>
     </div>
     <div v-else>
         <Spinner />
@@ -22,7 +23,7 @@ export default {
         onMounted(() => {
             setTimeout(() => {
                 loading.value = false;
-            }, 2100);
+            }, 100); //2100
         });
 
         return { loading };

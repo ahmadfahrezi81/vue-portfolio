@@ -25,11 +25,14 @@ const router = createRouter({
         },
     ],
     scrollBehavior(to, from, savedPosition) {
+        //this is to go to #About & #Contact
         if (to.hash) {
             return {
                 selector: to.hash,
+                behavior: "smooth",
             };
         }
+        document.getElementById("app").scrollIntoView({ behavior: "smooth" });
     },
 });
 

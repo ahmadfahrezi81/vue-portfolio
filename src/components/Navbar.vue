@@ -3,7 +3,12 @@
         <div v-if="isDesktop" class="navbar_desktop">
             <ul class="desktop_option">
                 <!-- <li @click="test">About</li> -->
-                <li @click="home"><a href="#AboutMe">About</a></li>
+                <!-- <li @click="home"><a href="#AboutMe">About</a></li> -->
+                <!-- <router-link to="#about">Enter</router-link> -->
+                <router-link :to="{ path: '/', hash: '#technology' }"
+                    >Technology</router-link
+                >
+
                 <li @click="home"><a href="#MainProject">Project</a></li>
                 <li @click="home"><a href="#Contact">Contact</a></li>
 
