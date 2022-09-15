@@ -28,11 +28,11 @@ const router = createRouter({
         //this is to go to #About & #Contact
         if (to.hash) {
             return {
-                selector: to.hash,
+                el: to.hash,
                 behavior: "smooth",
             };
         }
-        document.getElementById("app").scrollIntoView({ behavior: "smooth" });
+        return { top: 0 };
     },
 });
 

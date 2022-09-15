@@ -144,5 +144,9 @@ export default {};
     .section_footer:hover {
         color: #2c63d8;
     }
+
+    a {
+        margin-bottom: 2rem;
+    }
 }
 </style>

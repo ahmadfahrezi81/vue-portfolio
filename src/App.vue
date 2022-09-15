@@ -3,7 +3,6 @@
         <Navbar />
         <!-- <HomeView /> -->
         <router-view />
-        <div id="technology">IT SHOULD SCROLL TO HERE</div>
     </div>
     <div v-else>
         <Spinner />

@@ -46,7 +46,7 @@ export default {
             isOpen.value = window.innerWidth > 640;
 
             window.addEventListener("resize", () => {
-                console.log(window.innerWidth);
+                // console.log(window.innerWidth);
 
                 isOpen.value = window.innerWidth > 640;
             });
@@ -63,10 +63,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-// body {
-//     height: 200vh;
-// }
-
 .sidebar_arrow {
     z-index: 100;
     position: fixed;

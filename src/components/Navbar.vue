@@ -2,19 +2,15 @@
     <div>
         <div v-if="isDesktop" class="navbar_desktop">
             <ul class="desktop_option">
-                <!-- <li @click="test">About</li> -->
-                <!-- <li @click="home"><a href="#AboutMe">About</a></li> -->
-                <!-- <router-link to="#about">Enter</router-link> -->
-                <router-link :to="{ path: '/', hash: '#technology' }"
-                    >Technology</router-link
+                <router-link :to="{ path: '/', hash: '#AboutMe' }"
+                    >About</router-link
                 >
-
-                <li @click="home"><a href="#MainProject">Project</a></li>
-                <li @click="home"><a href="#Contact">Contact</a></li>
-
-                <!-- <li>About</li>
-                <li>Project</li>
-                <li>Contact</li> -->
+                <router-link :to="{ path: '/', hash: '#MainProject' }"
+                    >Project</router-link
+                >
+                <router-link :to="{ path: '/', hash: '#Contact' }"
+                    >Contact</router-link
+                >
             </ul>
             <Logo />
             <button class="desktop_resume">Resume</button>
@@ -29,12 +25,24 @@
                 </div>
             </div>
             <div v-else class="mobile_menu_opened">
-                <Logo />
+                <Logo @click="handleMenu" />
 
                 <ul class="mobile_option">
-                    <li @click="home"><a href="#AboutMe">About</a></li>
-                    <li @click="home"><a href="#MainProject">Project</a></li>
-                    <li @click="home"><a href="#Contact">Contact</a></li>
+                    <router-link
+                        @click="handleMenu"
+                        :to="{ path: '/', hash: '#AboutMe' }"
+                        >About</router-link
+                    >
+                    <router-link
+                        @click="handleMenu"
+                        :to="{ path: '/', hash: '#MainProject' }"
+                        >Project</router-link
+                    >
+                    <router-link
+                        @click="handleMenu"
+                        :to="{ path: '/', hash: '#Contact' }"
+                        >Contact</router-link
+                    >
                 </ul>
                 <button class="mobile_resume">Resume</button>
 
@@ -76,12 +84,7 @@ export default {
             isMenu.value = !isMenu.value;
         };
 
-        const home = () => {
-            router.push("/");
-            handleMenu();
-        };
-
-        return { isDesktop, isMenu, handIsAlive, handleMenu, home };
+        return { isDesktop, isMenu, handIsAlive, handleMenu };
     },
 };
 </script>
@@ -103,13 +106,14 @@ export default {
         margin: 0;
         padding: 0;
 
-        li {
+        // router-link is a tag when rendered
+        a {
             font-size: 1.2rem;
             padding: 0.5rem 0;
             cursor: pointer;
         }
 
-        li:hover {
+        a:hover {
             transform: scale(1.05);
             border-bottom: 5px #dae0ff solid;
         }
@@ -194,7 +198,7 @@ export default {
             margin: 0;
             padding: 0;
 
-            li {
+            a {
                 font-size: 1.8rem;
                 cursor: pointer;
             }
