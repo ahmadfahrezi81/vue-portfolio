@@ -14,9 +14,15 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 640px) {
+    .spinner-box {
+        cursor: pointer;
+    }
+}
+
 .spinner-box {
     z-index: 100;
-    cursor: pointer;
+    // cursor: pointer;
     width: 50px;
     height: 50px;
     margin: 20px;

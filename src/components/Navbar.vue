@@ -27,9 +27,9 @@
                 <Logo />
 
                 <ul class="mobile_option">
-                    <li @click="home">About</li>
-                    <li>Project</li>
-                    <li>Contact</li>
+                    <li @click="home"><a href="#AboutMe">About</a></li>
+                    <li @click="home"><a href="#MainProject">Project</a></li>
+                    <li @click="home"><a href="#Contact">Contact</a></li>
                 </ul>
                 <button class="mobile_resume">Resume</button>
 
@@ -73,6 +73,7 @@ export default {
 
         const home = () => {
             router.push("/");
+            handleMenu();
         };
 
         return { isDesktop, isMenu, handIsAlive, handleMenu, home };
