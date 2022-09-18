@@ -1,20 +1,135 @@
-[
-    {
-        "skills": [
-            "Html", "CSS", "JavaScript", "Typescript",
-            "Vue", "React", "JQuery", "Node", "Express", "Bootstrap", "Tailwinds", 
-            "Scss/Sass", "Semantic UI", "Git", "Git bash", "Java", "Python", "Firestore", 
-            "MongoDB", "Firebase Auth"
-        ],
-        "otherNotable": [
-            {
-                "date": "",
-                "title": "Atask",
-                "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nihil, porro deserunt magni eveniet atque cupiditate natus amet, officia autem quam repudiandae magnam delectus ipsa, laboriosam assumenda quaerat accusantium officiis.",
-                "stack": ["HTML", "CSS", "JS"],
-                "github": "",
-                "external": ""
+{
+    "skills": [
+        "Html", "CSS", "JavaScript", "Typescript",
+        "Vue", "React", "JQuery", "Node", "Express", "Bootstrap", "Tailwinds", 
+        "Scss/Sass", "Semantic UI", "Git", "Git bash", "Java", "Python", "Firestore", 
+        "MongoDB", "Firebase Auth"
+    ],
+    "MainProject":[
+        {
+            "type": "Web App",
+            "name": "Atask",
+            "desc":"This is a web application written in vanilla javascript. I wanted to monitor all of my daily activities to determine how productive I am on any given day. This simple web app may be able to help you better track your day.",
+            "img": "https://i.ibb.co/C7YtscV/ATASK-Track-Your-Day-1.png"
+        },    
+        {
+            "type": "Web App",
+            "name": "Google Doc Clone",
+            "desc":"I wanted to create my own Google Docs using vue and Firebase as the framework. This web app employs firebase auth to keep your documents secure, as well as realtime updates via firestore to ensure that your experience is as frictionless as possible.",
+            "img": "https://i.ibb.co/mRCvhC9/Google-Doc-Clone-4.png"
+        },    
+        {
+            "type": "Website",
+            "name": "Sneakers",
+            "desc":"This is a one-page website created in response to a Frontenemetor.io challenge. Building this site helped me hone my SCSS skills in order to create a really customized site that is both beautiful and seamless.",
+            "img": "https://i.ibb.co/L1ThLFx/Frontend-Mentor-E-commerce-product-page-1.png"
+        }
+    ],
+    "otherNotable": [
+        {
+            "name": "Guess Your Country",
+            "desc": "A web program that can determine your nationality based on your first or last name. It used two APIs to first guess where you are from based on your name and then submit that data to a second API to gather all the necessary information about that country."
+        },
+        {
+            "name": "Easybank",
+            "desc": "Easybank is a one-page site designed to showcase my SCSS capabilities. FrontEndMentor.io provided the framework and design. However, the code and execution are entirely original."
+        },
+        {
+            "name": "Covid 19 Tracker",
+            "desc": "This web app makes use of the covid19 API to display confirmed Covid-19 instances from around the world. All you have to do is pick a country to see how many confirmed cases and deaths that country has."
+        }
+    ],
+    "recent": [
+        {
+            "date": "Nov 11, 2021",
+            "name": "Atask",
+            "stacks": ["HTML", "CSS", "JavaScript"],
+            "links": {
+                "github": "https://github.com/Anti-glitches/Tracker-App",
+                "external": "https://atask.netlify.app/page/app.html"
             }
-        ]
-    }
-]
+        },
+        {
+            "date": "Dec 08, 2021",
+            "name": "Easybank",
+            "stacks": ["HTML", "SCSS", "JavaScript"],
+            "links": {
+                "github": "https://github.com/Anti-glitches/Easybank",
+                "external": "https://ahmadfahrezi-easybank.netlify.app/"
+            }
+        },
+        {
+            "date": "Dec 21, 2021",
+            "name": "NFT Card",
+            "stacks": ["HTML", "SCSS"],
+            "links": {
+                "github": "https://github.com/Anti-glitches/FrontEnd-Mentor---NFT-card",
+                "external": null
+            }
+        },
+        {
+            "date": "Dec 21, 2021",
+            "name": "Sneakers",
+            "stacks": ["HTML", "SCSS", "JavaScript"],
+            "links": {
+                "github": "https://github.com/Anti-glitches/E-commerce-Challenge",
+                "external": "https://ahmadfahrezi-sneakers.netlify.app/"
+            }
+        },
+        {
+            "date": "Feb 2, 2022",
+            "name": "Base Apparel",
+            "stacks": ["HTML", "CSS", "JavaScript"],
+            "links": {
+                "github": "https://github.com/Anti-glitches/FrontendMentor-Base-Apparel",
+                "external": "https://anti-glitches.github.io/FrontendMentor-Base-Apparel/"
+            }
+        },
+        {
+            "date": "Mar 12, 2022",
+            "name": "Bed Ecommerce",
+            "stacks": ["HTML", "CSS", "JavaScript", "Netlify Functions", "Contentful"],
+            "links": {
+                "github": "https://github.com/Anti-glitches/Bed-Commerce-Netlify-Functions-API",
+                "external": "https://ahmadfahrezi-comfyhouse.netlify.app/"
+            }
+        },
+        {
+            "date": "Apr 10, 2022",
+            "name": "Es teh v1",
+            "stacks": ["HTML", "CSS", "JavaScript"],
+            "links": {
+                "github": null,
+                "external": "https://es-teh.netlify.app/"
+            }
+        },
+        {
+            "date": "Jul 31, 2022",
+            "name": "Guess Your Country",
+            "stacks": ["HTML", "CSS", "JavaScript", "Vue", "API"],
+            "links": {
+                "github": "https://github.com/Anti-glitches/vue-findname-2022",
+                "external": "https://aesthetic-churros-86fd5e.netlify.app/"
+            }
+        },
+        {
+            "date": "Sep 17, 2022",
+            "name": "Covid 19 Tracker",
+            "stacks": ["HTML", "CSS", "JavaScript", "Vue", "API"],
+            "links": {
+                "github": null,
+                "external": "https://zippy-cobbler-70f1ac.netlify.app/"
+            }
+        },
+        {
+            "date": "Aug 22, 2022",
+            "name": "Google Doc Clone",
+            "stacks": ["HTML", "CSS", "JavaScript", "Vue", "Firebase Auth", "Firestore"],
+            "links": {
+                "github": "https://github.com/Anti-glitches/vue-text-auth",
+                "external": "https://vue-docs-clone.netlify.app/"
+            }
+        }
+    ]
+    
+}

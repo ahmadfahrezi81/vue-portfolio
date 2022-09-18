@@ -129,6 +129,8 @@ export default {
         padding: 0.5rem 4rem;
         cursor: pointer;
         transition: all 0.2s ease;
+
+        cursor: not-allowed;
     }
     .desktop_resume:hover {
         transform: translateY(-5px);

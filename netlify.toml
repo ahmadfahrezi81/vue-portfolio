@@ -1,4 +1,5 @@
 # The following redirect is intended for use with most SPA's that handles routing internally.
+#Testyhello@yopmail.com
 [[redirects]]
   from = "/*"
   to = "/index.html"

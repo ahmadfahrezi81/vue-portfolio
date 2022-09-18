@@ -7,22 +7,36 @@
 
         <div class="section_body">
             <div class="notable_cards">
-                <div class="notable_card" v-for="i in 4" :key="i">
-                    <h1>Title</h1>
+                <div
+                    class="notable_card"
+                    v-for="(item, i) in otherNotable"
+                    :key="i"
+                >
+                    <h1>{{ item.name }}</h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Illo nihil, porro deserunt magni eveniet atque
-                        cupiditate natus amet, officia autem quam repudiandae
-                        magnam delectus ipsa, laboriosam assumenda quaerat
-                        accusantium officiis.
+                        {{ item.desc }}
                     </p>
                     <div class="notable_footer">
                         <div class="built-with">
-                            <span v-for="i in 4" :key="i">HTML</span>
+                            <span v-for="(stack, i) in item.stacks" :key="i">{{
+                                stack
+                            }}</span>
                         </div>
                         <div class="links-to-go">
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-solid fa-up-right-from-square"></i>
+                            <a
+                                v-if="item.links.github"
+                                :href="item.links.github"
+                                target="_blank"
+                            >
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a
+                                v-if="item.links.external"
+                                :href="item.links.external"
+                                target="_blank"
+                            >
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -36,6 +50,7 @@
 </template>
 <script>
 import { useRouter } from "vue-router";
+import userData from "../assets/data.json";
 export default {
     setup() {
         const router = useRouter();
@@ -44,7 +59,12 @@ export default {
             router.push("/recent");
         };
 
-        return { toRecent };
+        const otherNotable = userData.otherNotable.map((item) => {
+            const obj = userData.recent.find((o) => o.name === item.name);
+            return { ...obj, ...item };
+        });
+
+        return { toRecent, otherNotable };
     },
 };
 </script>
@@ -74,6 +94,7 @@ export default {
         span {
             display: inline-block;
             font-size: 1.5rem;
+            transition: 0.5s ease all;
         }
     }
 
@@ -83,9 +104,10 @@ export default {
     }
 
     button.explore_all:hover span {
-        animation: rotateAnimate 1.3s alternate linear;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+        // animation: rotateAnimate 1.3s alternate linear;
+        // animation-iteration-count: 1;
+        // animation-fill-mode: forwards;
+        transform: scale(1.08) rotate(0.1turn);
     }
 
     @keyframes rotateAnimate {
@@ -115,7 +137,15 @@ export default {
     margin: 3rem 5vw;
 
     .notable_card {
-        display: block;
+        // display: block;
+        // position: relative;
+        // height: 100%;
+        // display: flex;
+        // flex-direction: column;
+
+        display: grid;
+        // grid-auto-rows: repeat(3, fit-content);
+
         padding: 2rem;
         border: 0.15rem solid black;
         border-radius: 10px;
@@ -133,6 +163,8 @@ export default {
         }
 
         .notable_footer {
+            align-self: flex-end;
+
             margin-top: 1rem;
             display: flex;
             justify-content: space-between;
@@ -145,8 +177,13 @@ export default {
 
             .built-with {
                 display: flex;
+                column-gap: 0.7rem;
                 flex-wrap: wrap;
-                column-gap: 0.5rem;
+
+                span {
+                    font-weight: bold;
+                    font-size: 0.95rem;
+                }
             }
 
             .links-to-go {

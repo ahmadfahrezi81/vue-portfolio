@@ -7,18 +7,20 @@
         <img src="/profile.png" alt="portfolio" />
 
         <div class="para">
-            <h3>I’m Ahmad, a Full Stack Dev.</h3>
+            <h3>I’m Ahmad, a Full Stack Dev</h3>
             <p>
-                I’ve spent the past 12+ years working across different areas of
-                digital design; front-end development, email design, marketing
-                site pages, app UI/UX, to my current role designing products for
-                mobile platforms.
+                I enjoy creating something both beautiful and useful. I've been
+                a web developer for 3+ years. I've used a variety of frameworks
+                and stacks to create full stack web applications. I am capable
+                of creating seamless ui/ux designs, prototyping, and coding. I
+                am confident in my abilities to assist you and advise you in
+                creating your ideal website.
             </p>
             <p>
-                These days my time is spent researching, designing, prototyping,
-                and coding. I also help designers get started with their
-                careers. Out of the office you’ll find me dreaming of soccer,
-                playing bass guitar, and petting all the good dogs.
+                I am currently in my second year of college, studying software
+                engineering at the University of Malaya, in order to improve my
+                technical understanding in computer science. In my spare time, I
+                enjoy reading and listening to podcasts.
             </p>
         </div>
 
@@ -34,7 +36,7 @@
 import userData from "../assets/data.json";
 export default {
     setup() {
-        const skills = userData[0].skills;
+        const skills = userData.skills;
 
         return { skills };
     },

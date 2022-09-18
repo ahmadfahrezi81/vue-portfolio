@@ -6,28 +6,42 @@
         </div>
 
         <div class="section_body">
-            <div class="card" v-for="i in 4" :key="i">
+            <div class="card" v-for="(item, i) in MainProject" :key="i">
                 <div class="card_title">
-                    <h3>Web App</h3>
-                    <h1>Atask</h1>
+                    <h3>{{ item.type }}</h3>
+                    <h1>{{ item.name }}</h1>
                 </div>
 
-                <img src="/photo.png" class="card_img" />
+                <!-- <img src="/photo.png" class="card_img" /> -->
+                <img :src="item.img" class="card_img" />
 
                 <div class="card_para">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Provident, voluptatum. Beatae assumenda aliquam, nisi
-                        eos atque placeat, quas nam corporis fugiat repudiandae
-                        quia necessitatibus maxime!
+                        {{ item.desc }}
                     </p>
                     <div class="card_para_footer">
                         <div class="built_with">
-                            <span v-for="i in 6" :key="i">HTML</span>
+                            <span v-for="(stack, i) in item.stacks" :key="i"
+                                >{{ stack }}
+                            </span>
                         </div>
                         <div class="links">
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-solid fa-up-right-from-square"></i>
+                            <!-- <i class="fa-brands fa-github"></i>
+                            <i class="fa-solid fa-up-right-from-square"></i> -->
+                            <a
+                                v-if="item.links.github"
+                                :href="item.links.github"
+                                target="_blank"
+                            >
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a
+                                v-if="item.links.external"
+                                :href="item.links.external"
+                                target="_blank"
+                            >
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -36,9 +50,32 @@
     </div>
 </template>
 <script>
-export default {};
+import userData from "../assets/data.json";
+export default {
+    setup() {
+        const MainProject = userData.MainProject.map((item) => {
+            const obj = userData.recent.find((o) => o.name === item.name);
+            return { ...obj, ...item };
+        });
+
+        console.log(MainProject);
+
+        return { MainProject };
+    },
+};
 </script>
 <style lang="scss" scoped>
+// bg color gradient
+.card:nth-child(1) {
+    background: linear-gradient(125deg, #f9ccf7, #ffeec3);
+}
+.card:nth-child(2) {
+    background: linear-gradient(125deg, #ccf9e9, #ffc3f9);
+}
+.card:nth-child(3) {
+    background: linear-gradient(125deg, #f9f2cc, #e5ffc3);
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -47,7 +84,7 @@ export default {};
     margin: 0 1rem;
     margin-bottom: 2rem;
 
-    background: linear-gradient(125deg, #f9ccf7, #ffeec3);
+    // background: linear-gradient(125deg, #f9ccf7, #ffeec3);
     border-radius: 1rem;
 
     &_title {
@@ -72,6 +109,7 @@ export default {};
 
     &_img {
         width: 100%;
+        border-radius: 0.5rem;
     }
 
     &_para {
@@ -90,8 +128,13 @@ export default {};
 
             .built_with {
                 display: flex;
-                column-gap: 0.5rem;
+                column-gap: 0.7rem;
                 flex-wrap: wrap;
+
+                span {
+                    font-weight: bold;
+                    font-size: 0.95rem;
+                }
             }
 
             .links {
@@ -139,6 +182,9 @@ export default {};
         align-items: center;
         padding: 2.5rem;
 
+        // border: 2px solid #232330;
+        // box-shadow: 2px 2px black;
+
         &_title {
             grid-area: title;
 
@@ -160,6 +206,7 @@ export default {};
             grid-area: para;
             min-width: 350px;
             margin-right: -10vw;
+            border: 2px solid #232330;
 
             &_footer {
                 align-items: center;
@@ -171,16 +218,13 @@ export default {};
 @media (min-width: 1050px) {
     .card {
         width: 1000px;
-        // height: 476px;
-
-        &_title {
-            margin-bottom: -3rem;
+        .card_title {
+            margin-bottom: 0rem;
         }
-
-        &_img {
-            height: 90%;
-            width: auto;
-            // align-self: flex-end;
+        .card_img {
+            height: 100%;
+            width: 463px;
+            // margin: 2rem 0;
             justify-self: end;
         }
     }

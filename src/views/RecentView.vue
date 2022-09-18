@@ -1,12 +1,12 @@
 <template>
     <div>
-        <Recent />
+        <Archive />
     </div>
 </template>
 <script>
-import Recent from "../components/Recent.vue";
+import Archive from "../components/Archive.vue";
 export default {
-    components: { Recent },
+    components: { Archive },
 };
 </script>
 

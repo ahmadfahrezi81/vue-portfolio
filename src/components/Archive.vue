@@ -13,15 +13,33 @@
                 <h3>Links</h3>
             </div>
             <div class="table_body">
-                <div class="table_row" v-for="i in 10" :key="i">
-                    <p class="table_row_year">2022</p>
-                    <p class="table_row_title">Atask</p>
-                    <p class="table_row_tech">
-                        <span v-for="i in 6" :key="i">HTML</span>
-                    </p>
+                <div
+                    class="table_row"
+                    v-for="(item, i) in recent.slice().reverse()"
+                    :key="i"
+                >
+                    <p class="table_row_year">{{ item.date.slice(-4) }}</p>
+                    <p class="table_row_title">{{ item.name }}</p>
+                    <div class="table_row_tech">
+                        <span v-for="(stack, i) in item.stacks" :key="i">{{
+                            stack
+                        }}</span>
+                    </div>
                     <div class="table_row_links">
-                        <i class="fa-brands fa-github"></i>
-                        <i class="fa-solid fa-up-right-from-square"></i>
+                        <a
+                            v-if="item.links.github"
+                            :href="item.links.github"
+                            target="_blank"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a
+                            v-if="item.links.external"
+                            :href="item.links.external"
+                            target="_blank"
+                        >
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -29,7 +47,16 @@
     </div>
 </template>
 <script>
-export default {};
+import userData from "../assets/data.json";
+export default {
+    setup() {
+        const recent = userData.recent;
+
+        // console.log(recent);
+
+        return { recent };
+    },
+};
 </script>
 <style lang="scss" scoped>
 .section_recent {
@@ -107,8 +134,12 @@ export default {};
             column-gap: 1rem;
             font-size: 1.4rem;
 
-            i {
-                cursor: pointer;
+            a {
+                display: inline-block;
+
+                i {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -130,16 +161,23 @@ export default {};
     .table_row {
         padding: 0 2rem;
         grid-template-columns: 2fr 4fr 4fr 1fr;
+
         &_year {
             padding-left: 2rem;
         }
 
         &_tech {
-            display: grid;
-            // padding-right: 10rem;
-            grid-template-columns: repeat(3, min-content);
-            gap: 0.4rem;
+            display: flex;
+            column-gap: 1rem;
+            flex-wrap: wrap;
+            padding-right: 3rem;
         }
+        // &_tech {
+        //     display: grid;
+        //     grid-template-columns: repeat(3, min-content);
+        //     gap: 0.4rem;
+        //     align-items: center;
+        // }
     }
 }
 

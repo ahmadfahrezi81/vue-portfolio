@@ -15,7 +15,6 @@
 </template>
 <script>
 import MainProject from "../components/MainProject.vue";
-import Recent from "../components/Recent.vue";
 import Sidebar from "../components/Sidebar.vue";
 import Contact from "../components/Contact.vue";
 import OtherNotable from "../components/OtherNotable.vue";
@@ -29,7 +28,6 @@ import Test from "../components/Test.vue";
 export default {
     components: {
         MainProject,
-        Recent,
         Sidebar,
         Contact,
         OtherNotable,

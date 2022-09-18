@@ -50,6 +50,8 @@ export default {};
             background: none;
             cursor: pointer;
             transition: 0.5s ease all;
+
+            cursor: not-allowed;
         }
 
         button:hover {
