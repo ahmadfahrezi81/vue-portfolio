@@ -173,7 +173,8 @@ export default {
             // padding: 0 1rem;
             // border-radius: 1rem;
             font-weight: bold;
-            border-bottom: 3px solid #232330;
+            color: rgb(255, 66, 66);
+            border-bottom: 3px solid rgb(255, 66, 66);
         }
     }
 

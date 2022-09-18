@@ -9,7 +9,14 @@
             <h1>Let's chat</h1>
             <p>Have an exciting project in mind or just want to talk?</p>
             <p>Feel free to say hi! <span>&#128071;</span></p>
-            <button>Say hello <span>&#128075;</span></button>
+            <a href="mailto:ahmadfahrezi8127@gmail.com" target="_blank">
+                <button>Say hello <span>&#128075;</span></button>
+            </a>
+
+            <!-- <button>Say hello <span>&#128075;</span></button> -->
+            <!-- <a href="mailto:ahmadfahrezi8127@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+            </a> -->
         </div>
 
         <a

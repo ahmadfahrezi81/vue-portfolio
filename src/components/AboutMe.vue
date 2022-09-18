@@ -48,11 +48,11 @@ export default {
     flex-direction: column;
     // justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
     row-gap: 2rem;
 
     img {
-        box-shadow: 5px 5px #232330;
+        box-shadow: 3px 3px #232330;
         border-radius: 1rem;
         width: 300px;
         justify-self: center;
@@ -87,8 +87,8 @@ export default {
                 margin: 0.3rem;
 
                 display: inline-block;
-                border: 2px solid #232330;
-                box-shadow: 2px 2px #232330;
+                border: 2px solid #5b5b64;
+                box-shadow: 1px 1px #5b5b64;
                 border-radius: 0.5rem;
             }
         }

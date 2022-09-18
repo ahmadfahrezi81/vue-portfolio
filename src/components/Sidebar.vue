@@ -23,7 +23,10 @@
             </a>
         </div>
         <div class="icon">
-            <i class="fa-brands fa-dribbble"></i>
+            <!-- <i class="fa-brands fa-dribbble"></i> -->
+            <a href="https://dribbble.com/ahmadfahrezi" target="_blank">
+                <i class="fa-brands fa-dribbble"></i>
+            </a>
         </div>
     </div>
     <div class="sidebar_arrow">
@@ -86,7 +89,7 @@ export default {
         left: 6rem;
     }
 
-    i.fa-caret-left:hover {
+    i.fa-caret-left {
         animation: leftAnimation 0.4s alternate ease-in;
         animation-iteration-count: infinite;
 
@@ -104,7 +107,7 @@ export default {
         left: 0rem;
     }
 
-    i.fa-caret-right:hover {
+    i.fa-caret-right {
         animation: rightAnimation 0.4s alternate ease-in;
         animation-iteration-count: infinite;
 

@@ -51,7 +51,7 @@
                     >
                         <i class="fa-brands fa-twitter"></i>
                     </a>
-                    <a href="">
+                    <a href="https://ahmadfahrezi.netlify.app/" target="_blank">
                         <i class="fa-solid fa-globe"></i>
                     </a>
                 </div>
