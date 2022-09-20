@@ -3,7 +3,7 @@
         <div class="hero_text">
             <h1>Ahmad Fahrezi.</h1>
             <p>Full Stack Developer + Aspiring Software Engineer</p>
-            <button>Nothing for Now</button>
+            <button>Resume</button>
         </div>
         <div class="hero_animation">
             <img class="glasses" src="/glasses_doodle.png" alt="glasses" />
@@ -152,6 +152,10 @@ export default {};
             text-align: start;
             margin-top: 3rem;
             max-width: 450px;
+
+            button {
+                display: none;
+            }
         }
     }
 }

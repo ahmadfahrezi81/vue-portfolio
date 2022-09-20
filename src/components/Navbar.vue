@@ -30,6 +30,11 @@
                 <ul class="mobile_option">
                     <router-link
                         @click="handleMenu"
+                        :to="{ path: '/', hash: '' }"
+                        >Home</router-link
+                    >
+                    <router-link
+                        @click="handleMenu"
                         :to="{ path: '/', hash: '#AboutMe' }"
                         >About</router-link
                     >
@@ -44,7 +49,7 @@
                         >Contact</router-link
                     >
                 </ul>
-                <button class="mobile_resume">Resume</button>
+                <!-- <button class="mobile_resume">Resume</button> -->
 
                 <span class="mobile_close" @click="handleMenu">
                     <i class="fa-solid fa-xmark"></i>
@@ -189,6 +194,7 @@ export default {
         display: grid;
         grid-template-rows: 2fr 4fr 2fr 1fr;
         justify-items: center;
+        touch-action: none;
 
         .mobile_option {
             align-self: center;
@@ -220,7 +226,7 @@ export default {
         }
 
         .mobile_close {
-            align-self: flex-start;
+            align-self: flex-end;
 
             width: 60px;
             height: 60px;
