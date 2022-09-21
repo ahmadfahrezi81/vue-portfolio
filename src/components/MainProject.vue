@@ -140,11 +140,15 @@ export default {
             .links {
                 display: flex;
                 align-items: center;
-                column-gap: 0.5rem;
+                column-gap: 0.8rem;
                 font-size: 1.3rem;
 
                 i {
                     cursor: pointer;
+
+                    &:hover {
+                        color: #2c63d8;
+                    }
                 }
             }
         }

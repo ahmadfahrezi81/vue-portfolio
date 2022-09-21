@@ -7,7 +7,7 @@
         <img src="/profile.png" alt="portfolio" />
 
         <div class="para">
-            <h3>I’m Ahmad, a Full Stack Dev</h3>
+            <h3>I’m Ahmad, a Full Stack Web Dev 😎</h3>
             <p>
                 I enjoy creating something both beautiful and useful. I've been
                 a web developer for 3+ years. I've used a variety of frameworks
@@ -25,7 +25,7 @@
         </div>
 
         <div class="tech">
-            <h3>Technology I'm experience with:</h3>
+            <h3>Technology I'm experience with 💻:</h3>
             <div class="tech_skills">
                 <span v-for="(skill, i) in skills" :key="i">{{ skill }}</span>
             </div>

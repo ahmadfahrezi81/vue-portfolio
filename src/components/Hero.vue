@@ -4,7 +4,7 @@
             <h1>Ahmad Fahrezi.</h1>
             <p>Full Stack Developer + Aspiring Software Engineer</p>
 
-            <button>Resume</button>
+            <button>Resume 📝</button>
         </div>
         <div class="hero_animation">
             <img class="glasses" src="/glasses_doodle.png" alt="glasses" />

@@ -194,6 +194,10 @@ export default {
 
                 i {
                     cursor: pointer;
+
+                    &:hover {
+                        color: #2c63d8;
+                    }
                 }
             }
         }
