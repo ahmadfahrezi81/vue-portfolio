@@ -186,7 +186,8 @@ export default {
     .mobile_menu_opened {
         z-index: 199;
         position: fixed;
-        background: #ffd68f;
+        // background: #ffd68f;
+        background: linear-gradient(125deg, #ccf9db, #efffc3);
         left: 0;
         right: 0;
         top: 0;

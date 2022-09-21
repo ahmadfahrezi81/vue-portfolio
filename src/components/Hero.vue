@@ -3,6 +3,7 @@
         <div class="hero_text">
             <h1>Ahmad Fahrezi.</h1>
             <p>Full Stack Developer + Aspiring Software Engineer</p>
+
             <button>Resume</button>
         </div>
         <div class="hero_animation">
@@ -47,16 +48,26 @@ export default {};
             border: 3px solid #232330;
             border-radius: 0.5rem;
             padding: 1rem 4rem;
-            background: none;
+            // background: none;
             cursor: pointer;
             transition: 0.5s ease all;
 
-            cursor: not-allowed;
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #232330;
+
+            background: rgba(255, 255, 255, 0.19);
+            // backdrop-filter: blur(8.9px);
+
+            // cursor: not-allowed;
+
+            // background: linear-gradient(125deg, #ccf9db, #efffc3);
         }
 
         button:hover {
             transform: translateY(-0.5rem);
             box-shadow: 2px 2px #232330;
+            // background: linear-gradient(125deg, #ccf9db, #efffc3);
         }
     }
 }
