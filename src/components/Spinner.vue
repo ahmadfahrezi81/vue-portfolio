@@ -11,7 +11,7 @@
         </div>
         <div class="typing-slider">
             <p>Hello There &#128526;</p>
-            <p>Sit back and relax</p>
+            <p>Sit back and relax </p>
         </div>
     </div>
 </template>
