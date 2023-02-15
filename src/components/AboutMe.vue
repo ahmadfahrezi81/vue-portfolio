@@ -47,20 +47,23 @@ export default {
     display: flex;
     flex-direction: column;
     // justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
+    // align-items: center;
+    // padding: 1.5rem;
     row-gap: 2rem;
+    margin: 0 12vw;
 
     img {
         box-shadow: 3px 3px #232330;
         border-radius: 1rem;
         width: 300px;
-        justify-self: center;
+        // margin-left: 0.5rem;
+        // justify-self: center;
     }
 
     .para {
         h3 {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            margin-top: 0;
         }
 
         p {
@@ -73,7 +76,7 @@ export default {
             font-size: 1.5rem;
             margin: 0;
             margin-bottom: 0.5rem;
-            margin-left: 0.3rem;
+            margin-left: 0rem;
         }
 
         &_skills {
@@ -92,6 +95,17 @@ export default {
                 border-radius: 0.5rem;
             }
         }
+
+        .tech_skills {
+            margin-left: -0.5rem;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .section_body {
+        // flex-direction: row;
+        margin: 0 8vw 0 8vw;
     }
 }
 
@@ -102,11 +116,12 @@ export default {
             "img para"
             "tech tech";
 
-        grid-template-columns: 2fr 3fr;
-        column-gap: 2rem;
-        padding: 0 2vw;
+        grid-template-columns: 2fr 4fr;
+        column-gap: 3.5rem;
+        row-gap: 3rem;
+        // padding: 0 2vw;
 
-        margin: 0 10vw;
+        // margin: 0 12vw;
 
         .para {
             grid-area: para;

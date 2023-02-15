@@ -62,11 +62,11 @@ export default {
 .section_recent {
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
-    padding: 0 5vw;
+    margin-top: 150px;
+    padding: 0 12vw;
 
     .section_head_recent {
-        margin-left: 1rem;
+        // margin-left: 1rem;
 
         h1 {
             margin: 0;
@@ -81,7 +81,7 @@ export default {
 }
 
 .section_body {
-    width: 90vw;
+    // width: 90vw;
     padding: 3rem 0;
 
     h3 {
@@ -146,6 +146,12 @@ export default {
 
     .table_row:hover {
         background: aliceblue;
+    }
+}
+
+@media (max-width: 900px) {
+    .section_recent {
+        padding: 0 8vw;
     }
 }
 

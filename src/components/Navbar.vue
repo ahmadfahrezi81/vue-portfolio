@@ -1,23 +1,79 @@
 <template>
     <div>
-        <div v-if="isDesktop" class="navbar_desktop">
+        <div
+            v-if="isDesktop"
+            class="navbar_desktop"
+            :style="[
+                view.topOfPage
+                    ? {
+                          backgroundColor: '#FDFAF3',
+                      }
+                    : {
+                          backgroundColor: '#01295F',
+                          opacity: '0.98',
+                      },
+            ]"
+        >
             <ul class="desktop_option">
-                <router-link :to="{ path: '/', hash: '#AboutMe' }"
+                <router-link
+                    :to="{ path: '/', hash: '#AboutMe' }"
+                    :style="[
+                        view.topOfPage
+                            ? {
+                                  color: 'black',
+                              }
+                            : {
+                                  color: 'white',
+                              },
+                    ]"
                     >About</router-link
                 >
-                <router-link :to="{ path: '/', hash: '#MainProject' }"
+                <router-link
+                    :to="{ path: '/', hash: '#MainProject' }"
+                    :style="[
+                        view.topOfPage
+                            ? {
+                                  color: 'black',
+                              }
+                            : {
+                                  color: 'white',
+                              },
+                    ]"
                     >Project</router-link
                 >
-                <router-link :to="{ path: '/', hash: '#Contact' }"
+                <router-link
+                    :to="{ path: '/', hash: '#Contact' }"
+                    :style="[
+                        view.topOfPage
+                            ? {
+                                  color: 'black',
+                              }
+                            : {
+                                  color: 'white',
+                              },
+                    ]"
                     >Contact</router-link
                 >
             </ul>
-            <Logo />
+            <Logo @click="handleHome" />
 
             <button class="desktop_resume" @click="openPDF">Resume</button>
             <!-- <a href="/resume.pdf"><button class="desktop_resume">Resume</button></a> -->
         </div>
-        <div v-else class="navbar_mobile">
+        <div
+            v-else
+            class="navbar_mobile"
+            :style="[
+                view.topOfPage
+                    ? {
+                          backgroundColor: '#FDFAF3',
+                      }
+                    : {
+                          backgroundColor: '#01295F',
+                          opacity: '0.98',
+                      },
+            ]"
+        >
             <div v-if="!isMenu">
                 <Logo @click="handleMenu" />
 
@@ -27,7 +83,7 @@
                 </div>
             </div>
             <div v-else class="mobile_menu_opened">
-                <Logo @click="handleMenu" />
+                <Logo @click="handleMenu" inMenu="true" />
 
                 <ul class="mobile_option">
                     <router-link
@@ -91,21 +147,68 @@ export default {
             isMenu.value = !isMenu.value;
         };
 
+        const handleHome = () => {
+            document.location.href = "/";
+        };
+
         const openPDF = () => {
             window.open("/Resume.pdf", "_blank");
         };
 
-        return { isDesktop, isMenu, handIsAlive, handleMenu, openPDF };
+        return {
+            isDesktop,
+            isMenu,
+            handIsAlive,
+            handleMenu,
+            handleHome,
+            openPDF,
+        };
+    },
+    created() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    unmounted() {
+        window.removeEventListener("scroll", this.handleScroll);
+    },
+    methods: {
+        handleScroll(event) {
+            // Any code to be executed when the window is scrolled
+            if (window.pageYOffset > 0) {
+                console.log("nothing");
+                this.view.topOfPage = false;
+            } else {
+                console.log("scrop");
+                this.view.topOfPage = true;
+            }
+        },
+    },
+    data() {
+        return {
+            view: {
+                topOfPage: true,
+            },
+        };
     },
 };
 </script>
 <style lang="scss" scoped>
+.onScroll {
+    background-color: #fff;
+}
 .navbar_desktop {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     justify-items: center;
     align-items: center;
-    padding: 0 5rem;
+    padding: 0 12vw;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    // margin-bottom: 200px;
+    background: #efffc3;
+    z-index: 999;
 
     .desktop_option {
         justify-self: start; //for the grid
@@ -149,11 +252,26 @@ export default {
     }
 }
 
+@media (max-width: 900px) {
+    .navbar_desktop {
+        padding: 0 8vw;
+        background: #000;
+    }
+}
+
 .navbar_mobile {
     display: flex;
     justify-content: center;
 
-    margin-bottom: 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    // margin-bottom: 200px;
+    background: #efffc3;
+    z-index: 999;
+
+    // margin-bottom: 3rem;
 
     .hand_animation {
         position: absolute;
@@ -195,7 +313,8 @@ export default {
         z-index: 199;
         position: fixed;
         // background: #ffd68f;
-        background: linear-gradient(125deg, #ccf9db, #efffc3);
+        // background: linear-gradient(125deg, #ccf9db, #efffc3);
+        background: #01295f;
         left: 0;
         right: 0;
         top: 0;
@@ -217,6 +336,7 @@ export default {
             padding: 0;
 
             a {
+                color: white;
                 font-size: 1.8rem;
                 cursor: pointer;
             }
@@ -239,7 +359,7 @@ export default {
 
             width: 60px;
             height: 60px;
-            border: 4px solid #232330;
+            border: 4px solid #fff1da;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -248,6 +368,7 @@ export default {
 
             i {
                 font-size: 2rem;
+                color: #fff1da;
             }
         }
     }

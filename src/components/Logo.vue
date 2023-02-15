@@ -1,16 +1,79 @@
 <template>
-    <div class="spinner-box">
-        <div class="configure-border-1">
+    <div class="spinner-box unselectable">
+        <div
+            class="configure-border-1"
+            :style="[
+                !view.topOfPage || inMenu
+                    ? {
+                          border: '2px solid white',
+                      }
+                    : {
+                          border: '2px solid black',
+                      },
+            ]"
+        >
             <div class="configure-core"></div>
         </div>
-        <div class="configure-border-2">
+        <div
+            class="configure-border-2"
+            :style="[
+                !view.topOfPage || inMenu
+                    ? {
+                          border: '2px solid white',
+                      }
+                    : {
+                          border: '2px solid black',
+                      },
+            ]"
+        >
             <div class="configure-core"></div>
         </div>
-        <span>A</span>
+        <span
+            :style="[
+                !view.topOfPage || inMenu
+                    ? {
+                          color: 'white',
+                      }
+                    : {
+                          color: 'black',
+                      },
+            ]"
+            >A</span
+        >
     </div>
 </template>
 <script>
-export default {};
+export default {
+    created() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    unmounted() {
+        window.removeEventListener("scroll", this.handleScroll);
+    },
+    methods: {
+        handleScroll(event) {
+            // Any code to be executed when the window is scrolled
+            if (window.pageYOffset > 0) {
+                console.log("nothing from logo");
+                this.view.topOfPage = false;
+            } else {
+                console.log("scrop from logo");
+                this.view.topOfPage = true;
+            }
+        },
+    },
+    props: {
+        inMenu: Boolean,
+    },
+    data() {
+        return {
+            view: {
+                topOfPage: window.pageYOffset === 0,
+                inMenu: this.inMenu,
+            },
+        };
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -18,6 +81,13 @@ export default {};
     .spinner-box {
         cursor: pointer;
     }
+}
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .spinner-box {
@@ -30,6 +100,7 @@ export default {};
     justify-content: center;
     align-items: center;
     background-color: transparent;
+    cursor: pointer;
 
     span {
         position: absolute;

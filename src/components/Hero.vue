@@ -23,12 +23,17 @@ export default {};
 <style lang="scss" scoped>
 .section_hero {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
 
     overflow: hidden;
-    padding: 1rem;
+    // padding: 1rem;
+
+    // margin-top: 200px;
+    // background: #000;
+    margin: 100px 12vw 0 12vw;
 
     .hero_text {
         text-align: center;
@@ -156,9 +161,17 @@ export default {};
     }
 }
 
+@media (max-width: 900px) {
+    .section_hero {
+        // flex-direction: row;
+        margin: 200px 8vw 0 8vw;
+    }
+}
+
 @media (min-width: 700px) {
     .section_hero {
         flex-direction: row;
+        // margin: 100px 8vw 0 8vw;
         // column-gap: 3rem;
 
         .hero_text {

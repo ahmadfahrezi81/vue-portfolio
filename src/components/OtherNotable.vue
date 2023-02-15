@@ -43,7 +43,7 @@
             </div>
 
             <button class="explore_all" @click="toRecent">
-                Explore All <span>&#129517;</span>
+                Explore All <span>&#128506;</span>
             </button>
         </div>
     </div>
@@ -81,7 +81,9 @@ export default {
     // margin-bottom: 40px;
 
     button.explore_all {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 15rem;
         padding: 0.9rem 2rem;
         border: 0.15rem solid black;
@@ -94,6 +96,7 @@ export default {
         span {
             display: inline-block;
             font-size: 1.5rem;
+            margin-left: 0.5rem;
             transition: 0.5s ease all;
         }
     }
@@ -107,7 +110,7 @@ export default {
         // animation: rotateAnimate 1.3s alternate linear;
         // animation-iteration-count: 1;
         // animation-fill-mode: forwards;
-        transform: scale(1.08) rotate(0.1turn);
+        transform: scale(1.15);
     }
 
     @keyframes rotateAnimate {
@@ -134,7 +137,7 @@ export default {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
     gap: 1.5rem 2.5rem;
-    margin: 3rem 5vw;
+    margin: 3rem 12vw;
 
     .notable_card {
         // display: block;
@@ -154,12 +157,12 @@ export default {
 
         h1 {
             margin: 0.5rem 0;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
         p {
             margin: 0;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .notable_footer {
@@ -205,6 +208,12 @@ export default {
 
     .notable_card:hover {
         transform: scale(1.03);
+    }
+}
+
+@media (max-width: 900px) {
+    .notable_cards {
+        margin: 3rem 8vw;
     }
 }
 </style>

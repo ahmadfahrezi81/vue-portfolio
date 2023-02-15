@@ -81,8 +81,8 @@ export default {
     flex-direction: column;
     padding: 2rem 1.5rem;
 
-    margin: 0 1rem;
-    margin-bottom: 2rem;
+    // margin: 0 1rem;
+    margin-bottom: 4rem;
 
     // background: linear-gradient(125deg, #f9ccf7, #ffeec3);
     border-radius: 1rem;
@@ -110,6 +110,7 @@ export default {
     &_img {
         width: 100%;
         border-radius: 0.5rem;
+        margin-bottom: 2rem;
     }
 
     &_para {
@@ -204,6 +205,7 @@ export default {
         &_img {
             grid-area: img;
             // min-width: 400px;
+            margin-bottom: 0;
         }
 
         &_para {
@@ -218,10 +220,19 @@ export default {
         }
     }
 }
+.section_body {
+    margin: 0 12vw;
+}
+
+@media (max-width: 900px) {
+    .section_body {
+        margin: 0 8vw;
+    }
+}
 
 @media (min-width: 1050px) {
     .card {
-        width: 1000px;
+        // width: 1000px;
         .card_title {
             margin-bottom: 0rem;
         }
